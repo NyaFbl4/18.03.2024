@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\Никита\AppData\Local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Никита\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_18.03.2024.1236896072.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Никита\Desktop\учеба\18.03.2024" t="IncludeRecursive">
+      <e p="18.03.2024.sln" t="IncludeFlat" />
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="Resources" t="Include">
+          <e p="BillingMode.json" t="Include" />
+        </e>
+        <e p="Scripts" t="Include">
+          <e p="Bullets" t="Include">
+            <e p="Bullet.cs" t="Include" />
+            <e p="BulletConfig.cs" t="Include" />
+            <e p="BulletSystem.cs" t="Include" />
+            <e p="BulletUtils.cs" t="Include" />
+          </e>
+          <e p="Character" t="Include">
+            <e p="CharacterController.cs" t="Include" />
+          </e>
+          <e p="Common" t="Include">
+            <e p="PhysicsLayer.cs" t="Include" />
+          </e>
+          <e p="Components" t="Include">
+            <e p="HitPointsComponent.cs" t="Include" />
+            <e p="MoveComponent.cs" t="Include" />
+            <e p="TeamComponent.cs" t="Include" />
+            <e p="WeaponComponent.cs" t="Include" />
+          </e>
+          <e p="Enemy" t="Include">
+            <e p="Agents" t="Include">
+              <e p="EnemyAttackAgent.cs" t="Include" />
+              <e p="EnemyMoveAgent.cs" t="Include" />
+            </e>
+            <e p="EnemyManager.cs" t="Include" />
+            <e p="EnemyPool.cs" t="Include" />
+            <e p="EnemyPositions.cs" t="Include" />
+          </e>
+          <e p="GameManager" t="Include">
+            <e p="GameListener.cs" t="Include" />
+            <e p="GameManager.cs" t="Include" />
+            <e p="GameSystem.cs" t="Include" />
+          </e>
+          <e p="Input" t="Include">
+            <e p="InputManager.cs" t="Include" />
+          </e>
+          <e p="Level" t="Include">
+            <e p="LevelBackground.cs" t="Include" />
+            <e p="LevelBounds.cs" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="Temp\Bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
