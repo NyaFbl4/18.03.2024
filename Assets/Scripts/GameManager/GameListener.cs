@@ -4,22 +4,22 @@
     {
     }
     
-    public interface IGameStartListener
+    public interface IGameStartListener : IGameListener
     {
         void OnStartGame();
     }
     
-    public interface IGameFinishListener
+    public interface IGameFinishListener : IGameListener
     {
         void OnFinishGame();
     } 
     
-    public interface IGamePauseListener
+    public interface IGamePauseListener : IGameListener
     {
         void OnPauseGame();
     }
     
-    public interface IGameResumeListener
+    public interface IGameResumeListener : IGameListener
     {
         void OnResumeGame();
     }

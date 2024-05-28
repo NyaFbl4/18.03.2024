@@ -14,6 +14,7 @@
     <changedPaths>
       <option value="$PROJECT_DIR$/Assets/Scripts/GameManager/GameSystem.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/GameManager/GameListener.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Character/CharacterController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/GameManager/GameManager.cs" />
     </changedPaths>
   </component>
@@ -40,6 +41,7 @@
       <workItem from="1716815280370" duration="484000" />
       <workItem from="1716815790580" duration="835000" />
       <workItem from="1716816654923" duration="204000" />
+      <workItem from="1716900934049" duration="3934000" />
     </task>
     <servers />
   </component>
