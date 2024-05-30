@@ -12,7 +12,7 @@ namespace ShootEmUp
         [SerializeField]
         private BulletSystem _bulletSystem;
         
-        private readonly HashSet<GameObject> m_activeEnemies = new();
+        private readonly HashSet<GameObject> m_activeEnemies = new HashSet<GameObject>();
 
         private IEnumerator Start()
         {

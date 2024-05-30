@@ -18,7 +18,7 @@ namespace ShootEmUp
         [SerializeField, ReadOnly]
         private GameState gameState;
         
-        private List<IGameListener> gameListeners = new();
+        private List<IGameListener> gameListeners = new List<IGameListener>();
         
         private void Awake()
         {

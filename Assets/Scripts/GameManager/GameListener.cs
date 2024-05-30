@@ -1,7 +1,13 @@
-﻿namespace ShootEmUp
+﻿using UnityEngine;
+
+namespace ShootEmUp
 {
     public interface IGameListener
     {
+        void Method()
+        {
+            Debug.Log("Method");
+        }
     }
     
     public interface IGameStartListener : IGameListener

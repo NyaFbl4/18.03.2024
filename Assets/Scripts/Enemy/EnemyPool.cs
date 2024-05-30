@@ -22,7 +22,7 @@ namespace ShootEmUp
         [SerializeField]
         private GameObject prefab;
 
-        private readonly Queue<GameObject> enemyPool = new();
+        private readonly Queue<GameObject> enemyPool = new Queue<GameObject>();
         
         private void Awake()
         {

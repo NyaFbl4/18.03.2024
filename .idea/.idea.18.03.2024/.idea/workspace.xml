@@ -11,12 +11,16 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.services.analytics@4.0.1/Runtime/AnalyticsServiceInstance.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
-    <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/GameManager/GameSystem.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/GameManager/GameListener.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Character/CharacterController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/GameManager/GameManager.cs" />
-    </changedPaths>
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameManager/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyPool.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Bullets/BulletSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameManager/GameInstaller.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameManager/GameListener.cs" />
+      </list>
+    </option>
   </component>
   <component name="ProjectId" id="2h3GHXW3vNl7DOohhVhP9HSNiNH" />
   <component name="ProjectViewState">
@@ -27,7 +31,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -50,6 +54,12 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="381" y="261" width="998" height="708" key="SettingsEditor" timestamp="1716992507460">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="381" y="261" width="998" height="708" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1716992507460" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
