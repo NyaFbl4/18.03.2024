@@ -2,7 +2,9 @@ using UnityEngine;
 
 namespace ShootEmUp
 {
-    public sealed class CharacterController : MonoBehaviour
+    public sealed class CharacterController : MonoBehaviour, 
+        IGameStartListener, IGameFinishListener, IGamePauseListener,
+        IGameResumeListener //,IGameFixedUpdateListener
     {
         [SerializeField] private GameObject character; 
         [SerializeField] private GameManager gameManager;
@@ -11,12 +13,17 @@ namespace ShootEmUp
         
         public bool _fireRequired;
 
-        private void OnEnable()
+        private void Start()
+        {
+            IGameListener.Register(this);
+        }
+      
+        public void OnStartGame()
         {
             this.character.GetComponent<HitPointsComponent>().hpEmpty += this.OnCharacterDeath;
         }
 
-        private void OnDisable()
+        public void OnFinishGame()
         {
             this.character.GetComponent<HitPointsComponent>().hpEmpty -= this.OnCharacterDeath;
         }
@@ -30,6 +37,16 @@ namespace ShootEmUp
                 this.OnFlyBullet();
                 this._fireRequired = false;
             }
+        }
+        
+        public void OnPauseGame()
+        {
+            
+        }
+
+        public void OnResumeGame()
+        {
+            
         }
 
         private void OnFlyBullet()

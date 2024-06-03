@@ -11,16 +11,11 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.services.analytics@4.0.1/Runtime/AnalyticsServiceInstance.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameManager/GameManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyPool.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Bullets/BulletSystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameManager/GameInstaller.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameManager/GameListener.cs" />
-      </list>
-    </option>
+    <changedPaths>
+      <option value="$PROJECT_DIR$/Assets/Scripts/GameManager/GameListeners.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/GameManager/GameManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Character/CharacterController.cs" />
+    </changedPaths>
   </component>
   <component name="ProjectId" id="2h3GHXW3vNl7DOohhVhP9HSNiNH" />
   <component name="ProjectViewState">
