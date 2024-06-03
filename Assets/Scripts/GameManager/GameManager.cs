@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -22,6 +23,9 @@ namespace ShootEmUp
         private readonly List<IGameUpdateListener> _gameUpdateListeners = new();
         private readonly List<IGameFixedUpdateListener> _gameFixedUpdateListeners = new();
         private readonly List<IGameLateUpdateListener> _gameLateUpdateListeners = new();
+
+        public event Action OnStartGame;
+        public event Action OnCountdownStart;
         
         private void Awake()
         {
@@ -42,7 +46,7 @@ namespace ShootEmUp
             {
                 return;
             }
-
+        
             var deltaTime = Time.deltaTime;
             for (var i = 0; i < _gameUpdateListeners.Count; i++)
             {
@@ -106,11 +110,45 @@ namespace ShootEmUp
                     gameStartListener.OnStartGame();
                 }
             }
+            
+            OnStartGame?.Invoke(); 
+
+            Invoke(nameof(StartGameAfterCountdown), 3f);
+            
+            /*
+            OnStartGame?.Invoke();
+            
+            foreach (var gameListener in _gameListeners)
+            {
+                if (gameListener is IGameStartListener gameStartListener)
+                {
+                    gameStartListener.OnStartGame();
+                }
+            }
+
+            _gameState = GameState.Start;
+            Debug.Log("OnStartGame");
+            */
+        }
+
+        private void StartGameAfterCountdown()
+        {
+            /*
+             OnStartGame?.Invoke();
+
+            foreach (var gameListener in _gameListeners)
+            {
+                if (gameListener is IGameStartListener gameStartListener)
+                {
+                    gameStartListener.OnStartGame();
+                }
+            }
+            */
 
             _gameState = GameState.Start;
             Debug.Log("OnStartGame");
         }
-        
+
         [Button]
         public void FinishGame()
         {
@@ -149,7 +187,7 @@ namespace ShootEmUp
                     gameResumeListener.OnResumeGame();
                 }
             }
-            _gameState = GameState.Resume;
+            _gameState = GameState.Start;
         }
         
         public void FFinishGame()

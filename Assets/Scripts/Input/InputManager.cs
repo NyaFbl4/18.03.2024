@@ -34,14 +34,11 @@ namespace ShootEmUp
             {
                 this.HorizontalDirection = 0;
             }
-            
-            Debug.Log("1");
         }
 
         public void OnFixedUpdate(float deltaTime)
         {
             this.character.GetComponent<MoveComponent>().MoveByRigidbodyVelocity(new Vector2(this.HorizontalDirection, 0) * Time.fixedDeltaTime);
-            Debug.Log("2");
         }
 
         /*
