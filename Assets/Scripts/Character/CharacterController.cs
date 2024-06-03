@@ -3,8 +3,7 @@ using UnityEngine;
 namespace ShootEmUp
 {
     public sealed class CharacterController : MonoBehaviour, 
-        IGameStartListener, IGameFinishListener, IGamePauseListener,
-        IGameResumeListener //,IGameFixedUpdateListener
+        IGameStartListener, IGameFinishListener
     {
         [SerializeField] private GameObject character; 
         [SerializeField] private GameManager gameManager;
@@ -37,16 +36,6 @@ namespace ShootEmUp
                 this.OnFlyBullet();
                 this._fireRequired = false;
             }
-        }
-        
-        public void OnPauseGame()
-        {
-            
-        }
-
-        public void OnResumeGame()
-        {
-            
         }
 
         private void OnFlyBullet()
