@@ -13,8 +13,11 @@
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/Assets/Scripts/GameManager/GameListeners.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/GameManager/GameManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Character/CharacterController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Components/MoveComponent.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/GameManager/GameManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Level/LevelBackground.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Input/InputManager.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2h3GHXW3vNl7DOohhVhP9HSNiNH" />

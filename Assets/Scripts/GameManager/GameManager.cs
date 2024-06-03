@@ -23,9 +23,17 @@ namespace ShootEmUp
         private readonly List<IGameFixedUpdateListener> _gameFixedUpdateListeners = new();
         private readonly List<IGameLateUpdateListener> _gameLateUpdateListeners = new();
         
-        private void Start()
+        private void Awake()
         {
             _gameState = GameState.Off;
+            
+            IGameListener.onRegister += AddListener;
+        }
+        
+        private void OnDestroy()
+        {
+            _gameState = GameState.Finish;
+            IGameListener.onRegister -= AddListener;
         }
         
         private void Update()
