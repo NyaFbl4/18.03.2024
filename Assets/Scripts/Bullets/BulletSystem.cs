@@ -3,7 +3,8 @@ using UnityEngine;
 
 namespace ShootEmUp
 {
-    public sealed class BulletSystem : MonoBehaviour
+    public sealed class BulletSystem : MonoBehaviour, 
+        IGameStartListener, IGameFixedUpdateListener
     {
         [SerializeField]
         private int initialCount = 50;
@@ -25,8 +26,13 @@ namespace ShootEmUp
                 this.m_bulletPool.Enqueue(bullet);
             }
         }
-        
-        private void FixedUpdate()
+
+        public void OnStartGame()
+        {
+            IGameListener.Register(this);
+        }
+
+        public void OnFixedUpdate(float deltaTime)
         {
             this.m_cache.Clear();
             this.m_cache.AddRange(this.m_activeBullets);
@@ -39,6 +45,11 @@ namespace ShootEmUp
                     this.RemoveBullet(bullet);
                 }
             }
+        }
+
+        private void FixedUpdate()
+        {
+
         }
 
         public void FlyBulletByArgs(Args args)

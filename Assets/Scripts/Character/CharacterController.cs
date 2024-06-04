@@ -27,7 +27,7 @@ namespace ShootEmUp
             this.character.GetComponent<HitPointsComponent>().hpEmpty -= this.OnCharacterDeath;
         }
 
-        private void OnCharacterDeath(GameObject _) => this.gameManager.FFinishGame();
+        private void OnCharacterDeath(GameObject _) => this.gameManager.FinishGame();
 
         private void FixedUpdate()
         {

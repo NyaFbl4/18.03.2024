@@ -18,9 +18,13 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Input/InputManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/GameManager/GameStarter.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/ButtonsController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Character/CharacterController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Level/LevelBackground.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/GameStarter.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Level/LevelBackground.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyPool.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Bullets/BulletSystem.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Agents/EnemyAttackAgent.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Agents/EnemyMoveAgent.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Character/CharacterController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/GameManager/GameManager.cs" />
     </changedPaths>
   </component>

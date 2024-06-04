@@ -24,8 +24,8 @@ namespace ShootEmUp
         private readonly List<IGameFixedUpdateListener> _gameFixedUpdateListeners = new();
         private readonly List<IGameLateUpdateListener> _gameLateUpdateListeners = new();
 
-        public event Action OnStartGame;
-        public event Action OnCountdownStart;
+        public event Action OnStartGame; 
+        //public event Action OnCountdownStart;
         
         private void Awake()
         {
@@ -133,6 +133,8 @@ namespace ShootEmUp
                 }
             }
             
+            Time.timeScale = 0;
+            Debug.Log("vi proigrali");
             _gameState = GameState.Finish;
         }
         
@@ -146,7 +148,7 @@ namespace ShootEmUp
                     gamePauseListener.OnPauseGame();
                 }
             }
-            
+            Time.timeScale = 0;
             _gameState = GameState.Pause;
         }   
         
@@ -160,13 +162,8 @@ namespace ShootEmUp
                     gameResumeListener.OnResumeGame();
                 }
             }
+            Time.timeScale = 1;
             _gameState = GameState.Start;
-        }
-        
-        public void FFinishGame()
-        {
-            Debug.Log("Game over!");
-            Time.timeScale = 0;
         }
     }
 }
