@@ -3,7 +3,8 @@ using UnityEngine;
 
 namespace ShootEmUp
 {
-    public sealed class LevelBackground : MonoBehaviour, IGameFixedUpdateListener
+    public sealed class LevelBackground : MonoBehaviour, 
+        IGameStartListener,IGameFixedUpdateListener
     {
         private float startPositionY;
 
@@ -23,7 +24,10 @@ namespace ShootEmUp
         private void Start()
         {
             IGameListener.Register(this);
-            
+        }
+
+        public void OnStartGame()
+        {
             this.startPositionY = this.m_params.m_startPositionY;
             this.endPositionY = this.m_params.m_endPositionY;
             this.movingSpeedY = this.m_params.m_movingSpeedY;

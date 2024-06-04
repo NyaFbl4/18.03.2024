@@ -28,7 +28,6 @@ namespace ShootEmUp
 
         private void StartGame()
         {
-            //Debug.Log("1");
             _buttonsStart.SetActive(false);
             StartCoroutine(CountdownRoutine());
         }
@@ -38,11 +37,9 @@ namespace ShootEmUp
             for (int count = 3; count >= 1; count--)
             {
                 _timerStart.text = count.ToString();
-                //Debug.Log(count.ToString() + "...");
                 yield return new WaitForSeconds(1f);
             }
             _timerStart.text = " ";
-            //Debug.Log("Go!");
         }
     }
 }

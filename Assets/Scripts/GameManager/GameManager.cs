@@ -114,37 +114,10 @@ namespace ShootEmUp
             OnStartGame?.Invoke(); 
 
             Invoke(nameof(StartGameAfterCountdown), 3f);
-            
-            /*
-            OnStartGame?.Invoke();
-            
-            foreach (var gameListener in _gameListeners)
-            {
-                if (gameListener is IGameStartListener gameStartListener)
-                {
-                    gameStartListener.OnStartGame();
-                }
-            }
-
-            _gameState = GameState.Start;
-            Debug.Log("OnStartGame");
-            */
         }
 
         private void StartGameAfterCountdown()
         {
-            /*
-             OnStartGame?.Invoke();
-
-            foreach (var gameListener in _gameListeners)
-            {
-                if (gameListener is IGameStartListener gameStartListener)
-                {
-                    gameStartListener.OnStartGame();
-                }
-            }
-            */
-
             _gameState = GameState.Start;
             Debug.Log("OnStartGame");
         }
