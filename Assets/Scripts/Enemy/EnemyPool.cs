@@ -28,13 +28,6 @@ namespace ShootEmUp
         private void Start()
         {
             IGameListener.Register(this);
-            /*
-            for (var i = 0; i < 7; i++)
-            {
-                var enemy = Instantiate(this.prefab, this.container);
-                this.enemyPool.Enqueue(enemy);
-            }
-            */
         }
 
         public void OnStartGame()
