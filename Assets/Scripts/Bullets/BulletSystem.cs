@@ -47,11 +47,6 @@ namespace ShootEmUp
             }
         }
 
-        private void FixedUpdate()
-        {
-
-        }
-
         public void FlyBulletByArgs(Args args)
         {
             if (this.m_bulletPool.TryDequeue(out var bullet))

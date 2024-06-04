@@ -32,7 +32,12 @@ namespace ShootEmUp
 
         public void OnStartGame()
         {
-            Debug.Log("EnemyPool");
+            Invoke("SpawnInPool", 3f);
+
+        }
+
+        private void SpawnInPool()
+        {
             for (var i = 0; i < 7; i++)
             {
                 var enemy = Instantiate(this.prefab, this.container);

@@ -3,7 +3,7 @@ using UnityEngine;
 namespace ShootEmUp
 {
     public sealed class CharacterController : MonoBehaviour, 
-        IGameStartListener, IGameFinishListener
+        IGameStartListener, IGameFinishListener, IGameFixedUpdateListener
     {
         [SerializeField] private GameObject character; 
         [SerializeField] private GameManager gameManager;
@@ -29,8 +29,8 @@ namespace ShootEmUp
 
         private void OnCharacterDeath(GameObject _) => this.gameManager.FinishGame();
 
-        private void FixedUpdate()
-        {
+        public void OnFixedUpdate(float deltaTime)
+        {    
             if (this._fireRequired)
             {
                 this.OnFlyBullet();

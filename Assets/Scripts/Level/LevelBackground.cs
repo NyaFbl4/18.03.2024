@@ -28,7 +28,6 @@ namespace ShootEmUp
 
         public void OnStartGame()
         {
-            Debug.Log("LevelBackground");
             this.startPositionY = this.m_params.m_startPositionY;
             this.endPositionY = this.m_params.m_endPositionY;
             this.movingSpeedY = this.m_params.m_movingSpeedY;

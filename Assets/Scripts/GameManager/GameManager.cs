@@ -22,11 +22,9 @@ namespace ShootEmUp
         private readonly List<IGameListener> _gameListeners = new();
         private readonly List<IGameUpdateListener> _gameUpdateListeners = new();
         private readonly List<IGameFixedUpdateListener> _gameFixedUpdateListeners = new();
-        private readonly List<IGameLateUpdateListener> _gameLateUpdateListeners = new();
-
-        public event Action OnStartGame; 
-        //public event Action OnCountdownStart;
         
+        public event Action OnStartGame;
+
         private void Awake()
         {
             _gameState = GameState.Off;
@@ -66,19 +64,7 @@ namespace ShootEmUp
                 _gameFixedUpdateListeners[i].OnFixedUpdate(deltaTime);
             }
         }
-        private void LateUpdate()
-        {
-            if (_gameState != GameState.Start)
-            {
-                return;
-            }
 
-            var deltaTime = Time.deltaTime;
-            for (var i = 0; i < _gameLateUpdateListeners.Count; i++)
-            {
-                _gameLateUpdateListeners[i].OnLateUpdate(deltaTime);
-            }
-        }
         
         private void AddListener(IGameListener gameListener)
         {
@@ -92,11 +78,6 @@ namespace ShootEmUp
             if (gameListener is IGameFixedUpdateListener gameFixedUpdateListener)
             {
                 _gameFixedUpdateListeners.Add(gameFixedUpdateListener);
-            }
-            
-            if (gameListener is IGameLateUpdateListener gameLateUpdateListener)
-            {
-                _gameLateUpdateListeners.Add(gameLateUpdateListener);
             }
         }
         
@@ -113,13 +94,12 @@ namespace ShootEmUp
             
             OnStartGame?.Invoke(); 
 
-            Invoke(nameof(StartGameAfterCountdown), 3f);
+            Invoke("StartGameAfterCountdown", 3f);
         }
 
         private void StartGameAfterCountdown()
         {
             _gameState = GameState.Start;
-            Debug.Log("OnStartGame");
         }
 
         [Button]

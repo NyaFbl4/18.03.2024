@@ -51,11 +51,6 @@ namespace ShootEmUp
             }
         }
 
-        private void FixedUpdate()
-        {
-
-        }
-
         private void Fire()
         {
             var startPosition = this.weaponComponent.Position;
